@@ -1,0 +1,632 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+@import "compass";
+@import "icons/*.png";
+@include all-icons-sprites;
+
+$purple: #5A4099;
+$lightgrey: #eee;
+$grey: #888;
+$darkgrey: #333;
+$brwn: #242424;
+$orange: #FF2400; 
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3 {
+    margin: 0px;
+    padding: 0px;    
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+header {
+    .logo { 
+        text-indent: -9999px; 
+        padding: 0px;
+        float: left;
+        overflow: hidden; 
+        display: block; 
+        width: 250px; 
+        height: 63px; 
+        margin: 20px 0 20px 30px; }
+    .flag {
+        display: inline-block;
+        vertical-align: top;
+        @include transition(opacity 1s ease-in-out, width 1s ease-in-out);
+        width: 0px;
+        opacity: 0;
+        height: 41px; }
+    .utility {
+        padding-right: 20px;
+        margin-bottom: 0px;
+        padding-bottom: 0px; 
+        li {
+            list-style: none;
+            margin-left: 0px;
+            display:block;
+            a {
+                color:$grey;
+                font-size: 11px;
+                padding: 0 7px;
+                border-radius: 0px;
+                border-right: 1px solid $grey;
+            }
+            &:last-child a {
+                border-right: none;
+            }
+        }
+    }
+    .phone {
+        float: right;
+        clear: right;
+        color: $purple;
+        font-weight: bold;
+        font-size: 32px;
+        margin: 20px;
+        letter-spacing: 1px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    form {
+        
+    }
+    .menu {
+        padding: 10px 20px;
+        background:rgba(0,0,0,0.4);
+        display: block;
+        clear: both;
+        width: 100%;
+        height: 61px;
+        z-index: 99;
+        @include transition(opacity 1s ease-in-out, top 1s ease-in-out);
+        opacity: 1;
+        top:0px;
+        &.hde {
+            @include transition(opacity 1s ease-in-out, top 1s ease-in-out);
+            opacity: 0;
+            top: -40px;
+        }
+        ul {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 0px;
+            padding-left: 0px;
+            li {
+                display: inline-block;
+                a { 
+                    display: block;
+                    padding: 14px 0;
+                    height: 40px;
+                    padding: 10px;
+                    color:#fff;
+                    line-height: 1.3em;
+                }
+                .active {
+                    a {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+        &.sticky {
+            .flag {
+                @include transition(opacity 1s ease-in-out, width 1s ease-in-out);
+                opacity: 1;
+                width: 41px;
+            }
+        }
+    }
+}
+
+.content { 
+    margin: 0px; 
+    padding-top: 0px;
+    a {
+        color: $darkgrey;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    article {
+        border-bottom: 5px solid $lightgrey;
+        padding: 40px 0 50px;
+        width: 90%;
+        margin: 0 auto 15px;
+    }
+    .hero {
+        position: relative;
+        margin: 0;
+        color: #fff;
+        .search {
+            position: absolute;
+            margin: 13% 0 0 10%;
+            h2 {
+                color: #fff;
+                margin: 0px 0 10px 0;
+                font-weight: normal;
+            }
+            .search-row {
+                width: 650px;
+                overflow: hidden;
+            }
+            .search-expanded, .where, .date, .search-anime {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .search-expanded {
+                width: 600px;
+            }
+            .search-anime {
+                width: 300px;
+                overflow: hidden;
+                height: 50px;
+                &.extend {
+                    width: 455px;
+                    @include transition(width 1s ease-in-out);
+                }
+            }
+            .where {
+                width:300px;
+            }
+            .date {
+                width: 100px;
+            }
+            a {
+                vertical-align: top;
+            }
+            .advanced-search {
+                color: $lightgrey;
+                margin-top: -6px;
+                &:hover {
+                    color: $orange;
+                }
+            }
+            .written {
+                background: none;
+                border: none;
+                font-size: 34px;
+                height: 60px;
+                border-radius: 0px;
+                padding-left: 0px;
+                width: 360px;
+                outline: none;
+                font-family: 'La Belle Aurore', cursive;
+                color: #fff;
+                &:focus {
+                    outline: none;
+                    height: 60px;
+                    border: none;
+                }
+                &::-webkit-input-placeholder {
+                   color: #fff;
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                   color: #fff;  
+                }
+                &::-moz-placeholder {  /* Firefox 19+ */
+                   color: #fff;  
+                }
+                &:-ms-input-placeholder {  
+                   color: #fff;  
+                } 
+            }
+        }
+        height: 400px;
+        background: transparent url(http://placehold.it/1200x600) no-repeat top left;
+        background-size: 100%;
+        .caption-location {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .travel-styles {
+        .leadins {
+            margin-bottom: 15px;
+            a {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 15px;
+                width: 220px;
+                color: $darkgrey;
+                h3 {
+                    margin: 5px 0;
+                    font-size: 18px;
+                }
+                p {
+                    display: block;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+                &:last-child {
+                    margin-right: none;
+                }
+            }
+        }
+    }
+
+    .video-gallery {
+        .video-block {
+            display: block;
+            width: 400px;
+            float: right;
+            a {
+                display: inline-block;
+                vertical-align: top;
+                width: 150px;
+                margin: 15px;
+                color: $darkgrey;
+                h3 {
+                    font-size: 14px;
+                    margin: 5px;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+    .featured-trip {
+        .trip {
+            display: inline-block;
+            vertical-align: top;
+            width: 450px;
+            h4 {
+                color: $grey;
+                margin: 3px 0 10px;
+                font-weight: normal;
+                font-size: 16px;
+            }
+        }
+        .testimonial {
+            h4 {
+                font-family: 'La Belle Aurore', cursive;
+                font-size: 32px;
+            }
+            display: inline-block;
+            vertical-align: top;
+            width: 300px;
+            margin-left: 100px;
+        }
+        h3 {
+            margin-top: 15px;
+        }
+    }
+
+    .listers {
+        position: relative;
+        h3 {
+            margin: 15px 0 5px;
+            font-size: 24px;
+        }
+        .listicals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            height: 450px;
+            .close {
+                position: absolute;
+                z-index: 99;
+                display: block;
+                right: 20px;
+                top: 20px;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .list-view {
+                width: 400px;
+                display: block;
+                overflow: hidden;
+                .list-container {
+                    display: block;
+                    vertical-align: top;
+                    .listitem {
+                        width: 400px;
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                }
+                .btn-row {
+                    width: 350px;
+                    height: 40px;
+                    .next-slide { 
+                        float: right;
+                    }
+                    .prev-slide { 
+                        float: left;
+                    }
+                    .of {
+                        display: block;
+                        width: 100px;
+                        height: 40px;
+                        vertical-align: middle;
+                        margin: 0 auto;
+                        line-height: 2em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .list {
+            vertical-align: top;
+            width: 30%;
+            display: inline-block;
+            margin-right: 40px;
+            &:last-of-type {
+                margin-right: 0px;
+            }
+            img {
+                width: 100%;
+            }
+            ol {
+                padding: 0px 0 0 20px;
+                margin-top: 10px;
+
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        color: $grey;
+                        h4 {
+                            margin: 0px;
+                            font-size: 16px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lists {
+        position: relative;
+        h3 {
+            margin: 15px 0 5px;
+            font-size: 24px;
+        }
+        .listicals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            z-index: 9;
+            background: #fff;
+            height: 400px;
+            .glyphicon-remove {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: default;
+            }
+        }
+        .list {
+            vertical-align: top;
+            width: 30%;
+            display: inline-block;
+            margin-right: 40px;
+            &:last-of-type {
+                margin-right: 0px;
+            }
+            img {
+                width: 100%;
+            }
+            ol {
+                padding: 0px 0 0 20px;
+                margin-top: 10px;
+
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        color: $grey;
+                        h4 {
+                            margin: 0px;
+                            font-size: 16px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .recommended {
+        a {
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 40px;
+            &:first-of-type {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .destinations {
+        img { 
+            float: left;
+            margin-right: 50px;
+        }
+        ul {
+            display: block;
+            margin-left: 60px;
+            li {
+                list-style: none;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .social-feed {
+        text-align: center;
+        blockquote {
+            font-style: italic;
+        }
+    }
+
+    .whyg {
+        div {
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 12px; 
+            }
+            display: inline-block;
+            vertical-align: top;
+            width: 30%;
+            margin-right: 40px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.convert {
+    width: 530px;
+    background: $darkgrey;
+    height: 90px;
+    padding: 15px 20px;
+    position: fixed;
+    z-inde: 99;
+    bottom: 0;
+    right: -530px;
+    @include transition(right 1s ease-in-out);
+    img {
+        margin-right: 15px;
+    }
+    h5 {
+        color: #fff;
+        margin-right: 15px;
+        max-width: 100px;
+    }
+    img, h5, p, input, a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input {
+        width: 200px;
+        margin: 0 5px;
+    }
+    &.slide {
+        right:0px;
+        @include transition(right 1s ease-in-out);
+        &.off{
+            right: -530px;
+        }
+    }
+    .glyphicon-remove {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.ypadding { 
+    padding-top: 40px;
+    margin-top: 125px; }
+
+.content p {
+    margin-bottom:20px;}
+.sticky { 
+    position:fixed; 
+    top:0; }
+
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+
+
