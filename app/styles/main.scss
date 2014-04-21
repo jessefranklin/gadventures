@@ -91,9 +91,6 @@ header {
             text-decoration: none;
         }
     }
-    form {
-        
-    }
     .menu {
         padding: 10px 20px;
         background:rgba(0,0,0,0.4);
@@ -559,6 +556,16 @@ header {
         cursor: pointer;
         &:hover {
             color: $orange;
+        }
+    }
+}
+
+.scene {
+    .carousel {
+        .item {
+            img {
+                width: 100%;
+            }
         }
     }
 }
