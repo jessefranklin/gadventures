@@ -9,6 +9,7 @@ function hideNav(){
 	}
 }
 
+
 $(document).ready(function(){
 
 	var offsetYnav = document.querySelector('.menu').offsetTop,
