@@ -567,6 +567,35 @@ header {
                 width: 100%;
             }
         }
+        .btn-flyout {
+            position: absolute; 
+            z-index: 12;
+            right: 5px;
+            width: 50px;
+            height: 50px;
+            top: 45%;
+            color: #fff;
+            background: $purple;
+            cursor: pointer;
+        }
+        .flyout-overlay {
+            top: 0%;
+            left: 100%;
+            right: -100%;
+            width: 100%;
+            @include transition(left 2s ease-in-out);
+            bottom: 0%;
+            padding: 5%;
+            position: absolute;
+            background:rgba(0,0,0,0.7);
+            z-index: 11;
+            color: white;
+            &.active {
+                left: 0%;
+                right: 0;
+                @include transition(left 2s ease-in-out);
+            }
+        }
     }
 }
 
@@ -575,10 +604,11 @@ header {
     margin-top: 125px; }
 
 .content p {
-    margin-bottom:20px;}
+    margin-bottom: 20px; }
+
 .sticky { 
-    position:fixed; 
-    top:0; }
+    position: fixed; 
+    top: 0; }
 
 
 /* Custom page footer */
@@ -623,6 +653,7 @@ header {
         padding-left: 0;
         padding-right: 0;
     }
+
 
     /* Space out the masthead */
     .header {

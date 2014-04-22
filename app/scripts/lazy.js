@@ -14,15 +14,26 @@ $(document).ready(function(){
 				var imgLoad = $(this).attr('data-src');
 				$(this).attr('src', imgLoad);
 			});
-		
+
 			ypos = ypos + 1;
 			loadScene  = loadScene + 1;
-
 		}
 	}
 	
 	document.onscroll = lazyLoader;
 
 });
+
+
+//Fly out on carousel view.
+$('.call-flyout').click(function(){
+	$(this).toggleClass('close');
+	$(this).closest('div').find('.flyout-overlay').toggleClass('active');
+});
+
+
+
+
+
 
 
