@@ -34,6 +34,3 @@ $('.call-flyout').click(function(){
 
 
 
-
-
-

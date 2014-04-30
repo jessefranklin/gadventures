@@ -1,0 +1,231 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>gadventures</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+            
+            <ul class="utility nav-pills pull-right">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <div class="icons-gadventures logo">g adventures</div>
+            <!-- <form class="navbar-form navbar-left" >
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Where do you want to go?" />
+                </div>
+                    <a href="#" class="btn btn-default">Go</a>
+            </form> 
+            <a href="#" class="phone">1 888 800 4100</a>
+            -->
+            <div class="menu">
+                <a href="#" class="icons-gflag flag"></a>
+            <ul>
+                <li><a href="story.html">Destinations</a></li>
+                <li><a href="#">Travel Styles</a></li>
+                <li><a href="#">Specials</a></li>
+            </ul>
+            </div>
+        </header>
+
+
+        <div class="content">
+<style>
+      #map-canvas {
+        height: 400px;
+        width: 800px;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+// [START region_initialization]
+// This example creates a custom overlay called USGSOverlay, containing
+// a U.S. Geological Survey (USGS) image of the relevant area on the map.
+
+// Set the custom overlay object's prototype to a new instance
+// of OverlayView. In effect, this will subclass the overlay class.
+// Note that we set the prototype to an instance, rather than the
+// parent class itself, because we do not wish to modify the parent class.
+
+var overlay;
+USGSOverlay.prototype = new google.maps.OverlayView();
+
+// Initialize the map and the custom overlay.
+
+function initialize() {
+  var mapOptions = {
+    zoom: 7,
+    center: new google.maps.LatLng(-0.3839569,-90.4513206),
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var swBound = new google.maps.LatLng(-3.0939569,-92.0513206);
+  var neBound = new google.maps.LatLng(1.3039569,-88.0313206);
+  var bounds = new google.maps.LatLngBounds(swBound, neBound);
+
+  // The photograph is courtesy of the U.S. Geological Survey.
+  var srcImage = 'images/galapagos.png';
+
+
+  // The custom USGSOverlay object contains the USGS image,
+  // the bounds of the image, and a reference to the map.
+  overlay = new USGSOverlay(bounds, srcImage, map);
+}
+// [END region_initialization]
+
+// [START region_constructor]
+/** @constructor */
+function USGSOverlay(bounds, image, map) {
+
+  // Initialize all properties.
+  this.bounds_ = bounds;
+  this.image_ = image;
+  this.map_ = map;
+
+  // Define a property to hold the image's div. We'll
+  // actually create this div upon receipt of the onAdd()
+  // method so we'll leave it null for now.
+  this.div_ = null;
+
+  // Explicitly call setMap on this overlay.
+  this.setMap(map);
+}
+// [END region_constructor]
+
+// [START region_attachment]
+/**
+ * onAdd is called when the map's panes are ready and the overlay has been
+ * added to the map.
+ */
+USGSOverlay.prototype.onAdd = function() {
+
+  var div = document.createElement('div');
+  div.style.borderStyle = 'none';
+  div.style.borderWidth = '0px';
+  div.style.position = 'absolute';
+
+  // Create the img element and attach it to the div.
+  var img = document.createElement('img');
+  img.src = this.image_;
+  img.style.width = '100%';
+  img.style.height = '100%';
+  img.style.position = 'absolute';
+  div.appendChild(img);
+
+  this.div_ = div;
+
+  // Add the element to the "overlayLayer" pane.
+  var panes = this.getPanes();
+  panes.overlayLayer.appendChild(div);
+};
+// [END region_attachment]
+
+// [START region_drawing]
+USGSOverlay.prototype.draw = function() {
+
+  // We use the south-west and north-east
+  // coordinates of the overlay to peg it to the correct position and size.
+  // To do this, we need to retrieve the projection from the overlay.
+  var overlayProjection = this.getProjection();
+
+  // Retrieve the south-west and north-east coordinates of this overlay
+  // in LatLngs and convert them to pixel coordinates.
+  // We'll use these coordinates to resize the div.
+  var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
+  var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
+
+  // Resize the image's div to fit the indicated dimensions.
+  var div = this.div_;
+  div.style.left = sw.x + 'px';
+  div.style.top = ne.y + 'px';
+  div.style.width = (ne.x - sw.x) + 'px';
+  div.style.height = (sw.y - ne.y) + 'px';
+};
+// [END region_drawing]
+
+// [START region_removal]
+// The onRemove() method will be called automatically from the API if
+// we ever set the overlay's map property to 'null'.
+USGSOverlay.prototype.onRemove = function() {
+  this.div_.parentNode.removeChild(this.div_);
+  this.div_ = null;
+};
+// [END region_removal]
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+<div id="map-canvas"></div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/lazy.js"></script>
+        <script src="scripts/canvas2image.js"></script>
+        <script src="scripts/base64.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

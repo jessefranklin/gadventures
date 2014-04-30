@@ -13,7 +13,7 @@ function hideNav(){
 $(document).ready(function(){
 
 	var offsetYnav = document.querySelector('.menu').offsetTop,
-		offsetYSubscribe = 1200,
+		offsetYSubscribe = 300,
 		scrollTimeout = null;
 
 	function scroll () {

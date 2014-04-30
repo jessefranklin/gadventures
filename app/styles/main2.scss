@@ -601,7 +601,6 @@ header {
 
 .ts-slider {
     padding: 0 0px 0 0px;
-    clear: both;
     .row {
         margin: 0px;
     }
@@ -615,10 +614,13 @@ header {
         max-width: 100%;
         outline: none;
         line-height: 100%;
-        height: 500px;
+        height: 600px;
         * {
+            margin: 0; 
+            padding: 0;
             border: 0;
-            padding: 0px;
+            font-size: 100%;
+            font: inherit;
             vertical-align: baseline;
             list-style: none;
             list-style-type: none;
@@ -627,208 +629,95 @@ header {
             line-height: 100%;
         }
         .ts-main-wrapper {
-            width: 1170px;
+            width: 100%;
             height: 100%;
-            margin: 0 auto;
             position: relative;
             overflow: hidden;
             .ts-list {
                 position: relative;
                 height: 100%;
-                width: 100%;
+                width: 200%;
                 cursor: pointer;
                 max-width: none !important;
                 list-style: none !important;
                 list-style-type: none !important;
                 li {
-                    position: absolute;
+                    position: relative;
                     height: 100%;
                     overflow: hidden;
                     display: inline-block;
-                    border-right: 2px solid #fff;
-                    &:first-child {
-                        border-right: 3px solid #fff;
-                        @include transition(border-right .0s ease-in-out .4s);
-                    }
+                    margin-right: -5px;
                     .ts-overlay {
                         width: 100%;
                     }
-                    .media-container, .video-container {
-                        position: absolute;
+                    .media-container {
+                        position: relative;
                         width: 100%;
                         height: 100%;
                         top: 0;
                         img {
                             max-width: none;
                             height: 100%;
+                            right: 0;
                         }
-                    }
-                    .media-container {
-                        img {
-                            position: absolute;
-                            z-index: 2;
-                        } 
-                    }
-                    .video-container {
-                        position: absolute;
-                        z-index: 1;
-                        top: 0;
-                        left: 0;
                     }
                     h2 {
                         font-size: 40px;
                         color: #fff;
-                        overflow: hidden;
-                        text-indent: -9999px;
-                        background:transparent url(../images/travel-style-sprite.png) no-repeat top left;
                         font-weight: bold;
                         position: absolute;
                         z-index: 2;
-                        top: 15px;
-                        display: block;
-                        width: 160px;
-                        height: 50px;
-                        padding-left: 0px;
-                        &.icons-Classic {
-                            background-position: -22px -10px;
-                        }
-                        &.icons-YOLO {
-                            width: 160px;
-                            height: 70px;
-                            background-position: -32px -410px;
-                        }
-                        &.icons-Marine {
-                            background-position: -22px -54px;
-                        }
-                        &.icons-Comfort {
-                            background-position: -22px -152px;
-                        }
-                        &.icons-Local {
-                            height: 70px;
-                            background-position: -22px -272px;
-                        }
-                        &.icons-Family {
-                            height: 70px;
-                            background-position: -22px -342px;
-                        }
-                        &.icons-Active {
-                            background-position: -22px -202px;
-                        }
+                        top: 10%;
+                        width: 100%;
+                        max-width: 100%;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                    .ts-desc {
+                        background-color: #fff;
+                        background: rgba(255, 255, 255, 0.8);
+                        position: absolute;
+                        max-width: 100%;
+                        padding: 20px;
+                        bottom: -240px;
                     }
                     .ts-close {
                         position: absolute;
+                        background: rgba(255, 255, 255, 0.8);
                         right: 0px;
                         top: -30px;
                         z-index: 5;
                         width: 30px;
                         height: 30px;
-                        background: transparent url(../images/travel-style-sprite.png) no-repeat -40px -500px;
-                    }
-                    &.zin {
-                        z-index: 3;
-                        overflow: visible;
-                        position: absolute;
+                        color: #000;
                     }
                     &.active {
-                        &:first-child {
-                            border-right: none;
-                            @include transition(border-right .0s ease-in-out .4s);
-                        }
+                        z-index: 3;
+                        overflow: visible;
+                        position: relative;
                         .media-container {
                             img {
                                 min-width: 100%;
-                                z-index: 3;
                             }
-                        }
-                        &.xActive .media-container img,
-                        &.xFamily .media-container img,
-                        &.xYOLO .media-container img,
-                        &.xLocal .media-container img,
-                        &.xComfort .media-container img {
-                            margin-left:0px;
-                            @include transition(margin-left .4s ease-in-out);
                         }
                         .ts-desc {
                             bottom: 0;
-                            @include transition(bottom .4s ease-in-out);
+                            @include transition(bottom 2s ease-in-out);
                         }
                         .ts-close {
                             position: absolute;
                             top: 0px;
-                            @include transition(top .4s ease-in-out);
+                            @include transition(top 1s ease-in-out);
                         }
-                        h2 { 
-                            padding-left: 20px;
-                            @include transition(padding-left .4s ease-in-out);
-                            z-index: 3;
+                        h2 {
+                            text-align: left;
+                            padding-left: 30px;
                         }
                     }
                 }
             }
         }
     }
-}
-
-.xActive .media-container img {
-    margin-left:-800px;
-    @include transition(margin-left .4s ease-in-out);
-}
-.xFamily .media-container img {
-    margin-left:-420px;
-    @include transition(margin-left .4s ease-in-out);
-}
-.xYOLO .media-container img {
-    margin-left:-420px;
-    @include transition(margin-left .4s ease-in-out);
-}
-.xLocal .media-container img {
-    margin-left:-760px;
-    @include transition(margin-left .4s ease-in-out);
-}
-.xComfort .media-container img {
-    margin-left:-540px;
-    @include transition(margin-left .4s ease-in-out);
-}
-.ts-desc {
-    margin-left: 30px;
-    position: absolute;
-    z-index: 4;
-    max-width: 100%;
-    padding: 20px;
-    bottom: -240px;
-    color: #fff;
-    @include transition(bottom .4s ease-in-out);
-    h3 {
-        font-size: 30px;
-    }
-    .btn {
-        padding: 5px 10px;
-        margin-bottom: 20px;
-    }
-}
-
-.ts-prev {
-    position: absolute;
-    z-index: 9;
-    cursor: pointer;
-    display: none; 
-    top: 40%;
-    background: transparent url(../images/arrow-left.png) no-repeat top left;
-    width: 50px;
-    height: 100px;
-    left: 0;    
-}
-
-.ts-next {
-    position: absolute;
-    z-index: 9;
-    cursor: pointer;
-    display: none; 
-    top: 40%;
-    background: transparent url(../images/arrow-right.png) no-repeat top left;
-    width: 50px;
-    height: 100px;
-    right: 0;   
 }
 
 .ypadding { 
@@ -871,38 +760,19 @@ header {
     }
 }
 
-/* Responsive: Portrait tablets and up */
 @media screen and (max-width: 768px) {
-    .ts-slider .ts-container .ts-main-wrapper .ts-list li {
-        cursor: default;
-        border-right: none;
-    }
-    .ts-prev, .ts-next {
-        display: block;
-    }
-    .xActive {
-        .ts-desc {
-            bottom: 0;
-        }
-        .media-container img {
-            margin-left:0px;
+    .ts-slider {
+        .ts-container {
+            height: 440px;
         }
     }
-    .xFamily .media-container img {
-        margin-left:0px;
-        @include transition(margin-left .4s ease-in-out);
-    }
-    .xYOLO {
-        .ts-desc {
-            bottom: 0;
-        }
-        .media-container img {
-            margin-left:0px;
-        }
-    }
-    .xLocal .media-container img {
-        margin-left:0px;
-        @include transition(margin-left .4s ease-in-out);
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
     }
 
     /* Remove the padding we set earlier */

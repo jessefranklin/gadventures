@@ -1,0 +1,292 @@
+{
+"itineraries": [
+    {
+        "type": "STRUCTURED", 
+        "duration": 9, 
+        "start_location": {
+            "lon" : -79.383184,
+            "lat" : 43.653226
+            },
+        "end_location": {
+            "lon" : -78.383184,
+            "lat" : 43.653226
+            },
+        "meals_included": {
+            "breakfasts": 3,
+            "lunches": 2,
+            "dinners": 5
+        },
+        "days": [
+            {
+                "_comment" : "day 1",
+                "id": 12345,
+                "href": "https://rest.gadventures.com/itinerary_day/12345",
+                "day": 1,
+                "summary": "Arrive at any time",
+                "description": "Arrive in San José at any time. A G Adventures representative will meet you at the airport and transfer you to our joining point hotel. There are no planned activities so check into our hotel and enjoy the city.", 
+                "instructions": "On trip operational instructions/tips/etc.",
+                "start_location": {
+                    "name": "San José",
+                    "country": { "name": "Costa Rica", "id": "CR", "href": "..." },
+                    "lat": "",
+                    "lon": "",
+                    "href": "https://rest.gadventures.com/locations/8342/"
+                }, 
+                "end_location": {
+                    "name": "San José",
+                    "country": { "name": "Costa Rica", "id": "CR", "href": "..." },
+                    "lat": "",
+                    "lon": "",
+                    "href": "https://rest.gadventures.com/locations/8342/"
+                }, 
+                "legs": null,
+                "videos": [{
+                    "href": "...",
+                    "width": 800,
+                    "height": 600,
+                    "name": "...",
+                    "description": "..."
+                }],
+                "images": [{
+                    "href": "...",
+                    "width": 800,
+                    "height": 600,
+                    "name": "...",
+                    "description": "..."
+                }]
+            },
+            {
+                "_comment" : "day 2",
+                "id": 12346,
+                "href": "https://rest.gadventures.com/itinerary_day/12346",
+                "day": 2,
+                "summary": "Enjoy tortilla-making along with a typical lunch with a local family. Included combo of kayaking and stand-up paddle board session on Lake Arenal. Options to go rafting, waterfall rappelling or floating through the Ca\u00f1o Negro Wildlife Refuge.", 
+                "description": "",
+                "instructions": "",
+                "start_location": { 
+                    "name": "San José",
+                    "lat": "43.650742", 
+                    "lon": "-79.404814" 
+                },
+                "end_location": { 
+                    "id": 4398953,
+                    "name": "Arenal Volcano",
+                    "city": { 
+                        "name": "La Fortuna", 
+                        "description": "La Fortuna is one of the centres of adventure travel in Costa Rica."
+                    },
+                    "href": "https://rest.gadventures.com/locations/4398953/"
+                },
+                "meals": [
+                    {
+                        "type": "BREAKFAST",
+                        "description": null
+                    },
+                    {
+                        "type": "LUNCH",
+                        "description": "For lunch today, experience an authentic cultural exchange with a local family at Do\u00f1a Mara's home. Do\u00f1a Mara will welcome the group with a tropical drink at her rancho (gazebo) where she will prepare a delicious lunch on her rustic wood-fired stove. We have the opportunity to try making tortillas out of fresh ground corn masa, Dona Mara will show us how to flatten the dough into perfect circles ready for cooking. The tortillas will then be served with lunch."
+                    }
+                ],
+                "meals_budget": {
+                    "amount_range": ["100.00", "200.00"],
+                    "amount": "100.00",
+                    "currency": "CRC"
+                },
+                "legs": [
+                    {
+                        "start_location": { 
+                            "name": "San José", 
+                            "lon" : -79.383184,
+                            "lat" : 43.653226
+                        },
+                        "end_location": { 
+                            "id": 4398953,
+                            "name": "Arenal Volcano",
+                            "city": { 
+                                "name": "La Fortuna", 
+                                "description": "La Fortuna is one of the centres of adventure travel in Costa Rica."
+                            },
+                            "href": "https://rest.gadventures.com/locations/4398953/"
+                        },
+                        "description": "A three-hour van trip brings us to La Fortuna, in the foothills of the spectacular Arenal Volcano.", 
+                        "transport_detail": {
+                            "transport_dossier": {
+                                "id": 9894398,
+                                "product_line": "TR-COSTRICA", 
+                                "type": "MOTOR_VEHICLE",
+                                "sub_type": "VAN",
+                                "capacity": 18,
+                                "tags": [
+                                    {"code": "TRANSPORT__FEATURE__AIR_CONDITION", "name": "Air Conditioning" },
+                                    {"code": "TRANSPORT__FEATURE__WIFI", "name": "Wifi" }
+                                ],
+                                "href": "https://rest.gadventures.com/transports/9894398",
+                                "private": true
+                            },
+                            "distance_km": 36,
+                            "duration": { 
+                                "min_hr": 3,
+                                "max_hr": 3
+                            }
+                        }
+                    },
+                    {
+                        "start_location": {
+                                "lon" : -79.183184,
+                                "lat" : 43.653226
+                            },
+                        "end_location": {
+                                "lon" : -79.113184,
+                                "lat" : 43.653226
+                            },
+                        "description": "Once we arrive, there's time to relax in the hot springs that are fed from the volcano itself.",  
+                        "activity_detail": {
+                                "activity_dossier": {
+                                "name": "Arenal Volcano Hike",
+                                "href": "https://rest.gadventures.com/activities/012358",
+                                "location": {
+                                    "name": "Arenal Volcano",
+                                    "lon" : -79.113184,
+                                    "lat" : 43.653226,
+                                    "href": "...",
+                                    "description": "Set on the northern plains of Costa Rica, Arenal Volcano sits on the southeast shore of artificial Lake Arenal (77 square kilometres, or 48 square miles). Separating the mountain ranges of Guanacaste and Tilar\u00e1n, the lake was created by a hydroelectric dam."
+                                },
+                                "duration": { 
+                                    "min_hr": 3,
+                                    "max_hr": 3
+                                },
+                                "tags": [
+                                    {"code": "ACTIVITY__LAND__HIKE", "name": "Hike"}, 
+                                    {"code": "ACTIVITY__LAND__BIKE", "name": "Bike"}
+                                ]
+                            },
+                            "duration": { 
+                                "min_hr": 3,
+                                "max_hr": 3
+                            }
+                        }
+                    }, 
+                    {
+                        "activity_detail": {
+                            "activity_dossier": {
+                                "id": 9834520,
+                                "name": "Kayak and Stand-Up Paddle Board",
+                                "href": "https://rest.gadventures.com/activities/9834520",
+                                "description": "Included combo of kayaking and stand-up paddle board session on Lake Arenal.",
+                                "location": {
+                                    "name": "Lake Arenal",
+                                    "lon" : -79.113184,
+                                    "lat" : 43.653226,
+                                    "href": "..."
+                                },
+                                "tags": [
+                                    {"code": "ACTIVITY__WATER__KAYAK", "name": "Kayak" }, 
+                                    {"code": "ACTIVITY__WATER__PADDLE_BOARD", "name": "Paddle Board"}
+                                ]
+                            }
+                        }
+                    }]
+            }, 
+            {
+                "_comment" : "day 3",
+                "id": 12347,
+                "href": "https://rest.gadventures.com/itinerary_day/12347",
+                "day": 3,
+                "start_location": { 
+                    "id": 4398953,
+                    "name": "Arenal Volcano",
+                    "lon" : -79.113184,
+                    "lat" : 43.653226
+                }, 
+                "end_location": { 
+                    "id": 4398953,
+                    "name": "Arenal Volcano",
+                    "lon" : -79.113184,
+                    "lat" : 43.653226
+                },
+                "description": "During our stay in La Fortuna, we have a free day to try rafting, rapelling or simply floating through the Ca\u00f1o Negro Wildlife Refuge. Depending on the age of your family, there is a selection of activities available to you.",
+                "meals": 
+                [{ 
+                        "type": "BREAKFAST", 
+                        "name": "Breakfast", 
+                        "description": null 
+                }],
+                "free_time": {
+                    "period": "MORNING | AFTERNOON | NIGHT | FULL_DAY",
+                    "start_time": "13:00",
+                    "end_time": "18:00",
+                    "duration_hr": 5
+                }
+            }
+        ]
+    }, 
+    {
+        "type": "SUMMARY", 
+        "duration": 9, 
+        "days": [{
+                "id": "125746337", 
+                "body": "Arrive at any time.", 
+                "label": "Day 1 San Jos\u00e9"
+            }, 
+            {
+                "id": "125746338", 
+                "body": "Enjoy tortilla-making along with a typical lunch with a local family. Included combo of kayaking and stand-up paddle board session on Lake Arenal. Options to go rafting, waterfall rappelling or floating through the Ca\u00f1o Negro Wildlife Refuge.", 
+                "label": "Day 2-3 La Fortuna/Arenal (2B)"
+            }, 
+            {
+                "id": "125746339", 
+                "body": "Guided nature hike in the Santa Elena Cloud Forest Reserve. Options to visit a butterfly garden, zipline through the canopy or go horseback riding.", 
+                "label": "Day 4-5 Monteverde (2B)"
+            }, 
+            {
+                "id": "125746340", 
+                "body": "Take a guided hike through the national park following trails through the forest. Keep an eye out for the wildlife that can be seen through the trees.  Enjoy a free day for several optional activities or take some time to relax on the beach.", 
+                "label": "Day 6-7 Manuel Antonio National Park (2B)"
+            }, 
+            {
+                "id": "125746341", 
+                "body": "Free morning to enjoy more time at the beach in Manuel Antonio National Park. Return to San Jos\u00e9 in the afternoon. Free evening in San Jos\u00e9.", 
+                "label": "Day 8 San Jos\u00e9 (B)"
+            }, 
+            {
+                "id": "125746342", 
+                "body": "Depart at any time.", 
+                "label": "Day 9 San Jos\u00e9 (1B)"
+            }
+        ]
+    }, 
+    {
+        "type": "DETAILED", 
+        "duration": 9, 
+        "days": [{
+                "id": "132696831", 
+                "body": "Arrive in San Jos\u00e9 at any time. A G Adventures representative will meet you at the airport and transfer you to our joining point hotel. There are no planned activities so check into our hotel and enjoy the city.\r\n\r\nLocated in the central highlands, San Jos\u00e9 enjoys a moderate climate. The heat and humidity of the coast and lowland areas may affect you, with a general sense of lethargy and/or loss of appetite. This is no cause for alarm, it is simply your body\u2019s reaction to the heat. Be sure to drink plenty of water (bottled water is available everywhere) and do not attempt too much in any given day. We prefer fan-cooled rather than air conditioned rooms to avoid having to acclimatize to the heat and humidity every time you go outside. This is also a more eco-friendly approach.\r\n\r\nLike most cities, San Jos\u00e9 has its good and bad sides. It is the centre of government, theatre, and art, as well as of air pollution and congestion. It has beautiful parks and museums, and a few beggars on the streets. It is big and often noisy, but even from its crowded downtown streets, you\u2019ll often enjoy a view of the surrounding lush mountains. \r\n\r\nStart your exploration of the city in the main plaza, a great place to people-watch. A mime, juggler, marimba band, magician, or storyteller may be performing for whatever is collected when the hat is passed. Artisan booths are common, creating a regular arts and crafts fair atmosphere. A source of pride for the ticos (as Costa Ricans are known) is the National Theatre. Inaugurated in 1897, the building was paid for by coffee growers through a voluntary tax on every bag of coffee exported. The National Museum, housed in the Bellavista Fortress, offers exhibits on pre-Columbian art, colonial art and furniture and religious art within a 19th century building that was converted from a military fortress after the army was abolished. \r\n\r\nThe Museum of Costa Rican Art, located in La Sabana Park, was once the international airport; the museum is now housed in the old terminal building. The Jade Museum is on the 11th floor of the Instituto Nacional de Seguros building. In addition to the marvellous collection of jade objects, there are pre-Columbian ceramic and stone works as well as displays with archaeological and ethnographic information. The Gold Museum is located underneath the Plaza de la Cultura. Its spectacular collection of indigenous gold art belongs to the Central Bank of Costa Rica.\r\n \r\nThe best and least expensive places to buy souvenirs in San Jos\u00e9 are the markets. The two main ones are the ones in Plaza de la Cultura, which is an outdoor open market, and the Central Market, where handicrafts are sold along with boots, fish, flour, herbal remedies, shirts and everything else you can imagine. Always watch your belongings and be ready for crowds. If you plan on spending a few days in San Jos\u00e9 after your tour, there are a number of activities within the city and area that you can participate in, many of them outdoors.\r\n\r\nProbably the hardest thing you will do in San Jos\u00e9, other than get safely across busy streets, is keep the street numbering systems straight. Street and avenue numbers are posted on buildings at the corners of some intersections. Keep looking as you walk, and you will eventually find one. \r\n\r\nNOTE: Like any city where tourism is on the increase, crime also tends to increase and while San Jos\u00e9 is not a noticeably dangerous city, there are certain precautions you should take. Make sure that you are aware of your things at all times and don't go out carrying expensive gear or jewellery.", 
+                "label": "Day 1 Arrive San Jos\u00e9"
+            }, 
+            {
+                "id": "132696832", 
+                "body": "A three-hour van trip brings us to La Fortuna, in the foothills of the spectacular Arenal Volcano. La Fortuna is one of the centres of adventure travel in Costa Rica. Once we arrive, there's time to relax in the hot springs that are fed from the volcano itself. For lunch today, experience an authentic cultural exchange with a local family at Do\u00f1a Mara's home. Do\u00f1a Mara will welcome the group with a tropical drink at her rancho (gazebo) where she will prepare a delicious lunch on her rustic wood-fired stove. We have the opportunity to try making tortillas out of fresh ground corn masa, Dona Mara will show us how to flatten the dough into perfect circles ready for cooking. The tortillas will then be served with lunch.\r\n\r\nSet on the northern plains of Costa Rica, Arenal Volcano sits on the southeast shore of artificial Lake Arenal (77 square kilometres, or 48 square miles). Separating the mountain ranges of Guanacaste and Tilar\u00e1n, the lake was created by a hydroelectric dam. During our stay in La Fortuna, we have a free day to try rafting, rapelling or simply floating through the Ca\u00f1o Negro Wildlife Refuge. Depending on the age of your family, there is a selection of activities available to you.", 
+                "label": "Day 2-3 La Fortuna/Arenal (2B)"
+            }, 
+            {
+                "id": "132696833", 
+                "body": "From La Fortuna, we make our way by boat and van up to the misty mountain air of the Monteverde cloud forest. We spend 2 days exploring the town and nearby Forest Reserve, truly a bird lover\u2019s paradise. Founded by Quakers in the 1950s the mountain dairy community of Monteverde has become an ecotourism haven due to the presence of the cloud forest reserve and the numerous other adventure options in the area.\r\n\r\nThe village of Monteverde was founded in the 1950s by Quakers from the United States. They wished to leave behind the constant fear of war and the obligation to support continued militarism through U.S. taxes and chose Costa Rica because it was committed to a non-militaristic economic path. Since its founding, Monteverde has grown slowly as other people, who shared the original Quaker founders\u2019 ideals, moved to the area. \r\n\r\nMonteverde or Green Mountain, is exactly what you find at the end of the long, rutted dirt road through the mountains. The surrounding pastures were once covered with dense forest, but today only a small piece of it remains. Cloud forest is much like a rainforest, but much of the moisture comes not from falling rain but from the condensation left by the nearly constant cloud cover that blankets the tops of mountains in many parts of the tropics. Enjoy a guided walk in The Santa Elena Reserve, which boasts a variety of plant and animal species, best known for being an area to spot the elusive quetzal.  All proceeds from this park profit the local community.", 
+                "label": "Day 4-5 Monteverde (2B)"
+            }, 
+            {
+                "id": "132696834", 
+                "body": "The white sand beaches and warm Pacific waters are the ideal atmosphere to relax at the end of your adventure. Manuel Antonio National Park offers excellent hiking, spectacular views, and abundant wildlife viewing. An included hike goes deep into the park, to explore everything that can be found here. Although this is Costa Rica\u2019s smallest National Park, it is also one of the most popular and it won\u2019t take you long to see why. This park has fabulous beaches, abundant wildlife, and a great trail system for those who want to spend the day hiking. Look for monkeys, armadillos, coatimundis, sloths and some of the over 350 species of birds that are present in the park!\r\n\r\nThere are beautiful white sand beaches and the warm turquoise water is ideal for swimming, fishing, kayaking, boogie boarding, sailing or surfing - the perfect finale to an exciting family adventure!\r\nOvernight in Manuel Antonio.", 
+                "label": "Day 6-7 Manuel Antonio National Park (2B)"
+            }, 
+            {
+                "id": "132696835", 
+                "body": "After one final morning to soak up the sun on the beach in Manuel Antonio, we return to San Jos\u00e9, and have time to enjoy one final evening together with our group.\r\n\r\nEstimated Travel Time: 5 hours\r\nApproximate Distance: 220 km\r\n", 
+                "label": "Day 8 San Jos\u00e9 (B)"
+            }, 
+            {
+                "id": "132696836", 
+                "body": "Depart at any time.", 
+                "label": "Day 9 San Jos\u00e9 (1B)"
+            }
+        ]
+}]}

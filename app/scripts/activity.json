@@ -1,0 +1,54 @@
+{
+    "activity": {
+    "id": 4398953,
+    "name": "Arenal Volcano",
+    "city": { 
+        "name": "La Fortuna", 
+        "description": "La Fortuna is one of the centres of adventure travel in Costa Rica."
+    },
+    "href": "https://rest.gadventures.com/locations/4398953/",  
+    "activities": [
+       {
+            "id": 12345,
+            "name": "Rafting Class III and IV",
+            "duration_hr": 7,
+            "price": { "currency": "USD", "amount": "75.00" },
+            "description": "this is a desc",
+            "href": "https://rest.gadventures.com/activity_dossier/12345",
+            "tags": [ 
+                { "code": "ACTIVITY__MEAL__LUNCH", "name": "Lunch" }
+            ],
+            "duration": { 
+                "min_hr": 3,
+                "max_hr": 3
+            }
+        },
+        {
+            "id": 23456,
+            "name": "Rafting Class II and III",
+            "duration_hr": 4.5,
+            "price": { "currency": "USD", "amount": "65.00" },
+            "description": "...",
+            "href": "https://rest.gadventures.com/activity_dossier/12345",
+            "tags": [ 
+                { "code": "ACTIVITY__MEAL__LUNCH", "name": "Lunch" }
+            ],
+            "duration": { 
+                "min_hr": 3,
+                "max_hr": 3
+            }
+        },
+        {
+            "id": 34567,
+            "name": "Canyoning/Rappelling tour",
+            "price": { "currency": "USD", "amount": "75.00" },
+            "duration_hr": 4, 
+            "description": "includes breakfast or lunch depending on tour time",
+            "href": "https://rest.gadventures.com/activity_dossier/34567",
+            "duration": { 
+                "min_hr": 3,
+                "max_hr": 3
+            }
+        } 
+    ]}
+}

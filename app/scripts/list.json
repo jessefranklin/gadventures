@@ -7,6 +7,7 @@
             {
                 "title" : "This is the list reason one",
                 "img" : "http://placehold.it/350x200",
+                "video" : "92182212",
                 "desc" : "this is the description",
                 "tour" : "Thailand",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"
@@ -14,6 +15,7 @@
             {
                 "title" : "This is the list reason two",
                 "img" : "http://placehold.it/350x200",
+                "video" : "92182212",
                 "desc" : "this is the description",
                 "tour" : "Croatia",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"

@@ -1,0 +1,67 @@
+{
+"travel": {   
+        "travelstyleUid" : "homepage",
+        "listName": "Travel Styles",
+        "listDesc": "This is the travel styles description",
+        "travelstyles" : [
+            {
+                "ttl" : "YOLO",
+                "tslogo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/classic.jpg",
+                "video" : "92182212",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            },
+            {
+                "ttl" : "Active",
+                "ts-logo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/comfort.jpg",
+                "video" : "92182212",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            },
+            {
+                "ttl" : "Classic",
+                "tslogo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/family.jpg",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            },
+            {
+                "ttl" : "Family",
+                "tslogo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/costa.jpg",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            },
+            {
+                "ttl" : "Marine",
+                "tslogo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/italy.jpg",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            },
+            {
+                "ttl" : "Comfort",
+                "tslogo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/tanzania.jpg",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            },
+            {
+                "ttl" : "Local Living",
+                "tslogo" : "http://placehold.it/250x150",
+                "bgimg" : "images/carousel/turkey.jpg",
+                "desctitle" : "this is the description title",
+                "desc" : "this is the description",
+                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
+            }
+        ]
+    }
+}
