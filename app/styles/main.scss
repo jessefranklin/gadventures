@@ -14,6 +14,7 @@ $grey: #888;
 $darkgrey: #333;
 $brwn: #242424;
 $orange: #FF2400; 
+$green: #8ab93f;
 
 .browsehappy {
     margin: 0.2em 0;
@@ -24,13 +25,33 @@ $orange: #FF2400;
 
 /* Space out content a bit */
 body {
-    padding-top: 5px;
+    padding-top: 0px;
     padding-bottom: 20px;
 }
 
 h1, h2, h3 {
     margin: 0px;
-    padding: 0px;    
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    font-size: 30px;
+    padding: 0px;   
+}
+.content {
+    a.btn-default {
+        background: rgba($green,1);
+        @include transition(background 1s ease-in-out);
+        padding: 8px 12px;
+        color: #fff;
+        border: $green;
+        &:hover {
+            background: rgba($green,.6);
+            @include transition(background 1s ease-in-out);
+        }
+    }
+}
+
+h2 {
+    font-size: 36px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -43,6 +64,10 @@ h1, h2, h3 {
 
 /* Custom page header */
 header {
+    position: absolute;
+    z-index: 99;
+    right:0;
+    left:0;
     .logo { 
         text-indent: -9999px; 
         padding: 0px;
@@ -62,13 +87,15 @@ header {
     .utility {
         padding-right: 20px;
         margin-bottom: 0px;
+        margin-top: 5px;
         padding-bottom: 0px; 
+
         li {
             list-style: none;
             margin-left: 0px;
             display:block;
             a {
-                color:$grey;
+                color: #fff;
                 font-size: 11px;
                 padding: 0 7px;
                 border-radius: 0px;
@@ -82,10 +109,11 @@ header {
     .phone {
         float: right;
         clear: right;
-        color: $purple;
+        /* color:rgba($purple,0.6); */
+        color: #fff;
         font-weight: bold;
         font-size: 32px;
-        margin: 20px;
+        margin: 30px 20px 0;
         letter-spacing: 1px;
         &:hover {
             text-decoration: none;
@@ -93,7 +121,8 @@ header {
     }
     .menu {
         padding: 10px 20px;
-        background:rgba(0,0,0,0.4);
+       /* background:rgba($purple,0.4); */
+        background:rgba($purple,0.4);
         display: block;
         clear: both;
         width: 100%;
@@ -107,6 +136,39 @@ header {
             opacity: 0;
             top: -40px;
         }
+        .pull-right {
+            margin-top: 4px;
+            padding-right: 0px;
+            .navbar-form {
+                margin-top: 0px;
+                width: 100%;
+                float: right;
+                padding-right: 0px;
+                .input-group {
+                    text-align: right;
+                    display: block;
+                    .form-control {
+                        border-radius: 5px;
+
+                    }
+                    &:after {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 20px;
+                            height: 20px;
+                            color: $grey;
+                            line-height:1;
+                            margin: 10px;
+                            z-index: 5;
+                            display:inline-block;
+                            font-family: "Glyphicons Halflings";
+                            content: "\e080";
+                        }
+                }
+            }
+        }
+        
         ul {
             display: inline-block;
             vertical-align: top;
@@ -149,18 +211,41 @@ header {
         }
     }
     article {
-        border-bottom: 5px solid $lightgrey;
-        padding: 40px 0 50px;
+        padding: 100px 0;
         width: 90%;
-        margin: 0 auto 15px;
+        margin: 0 auto;
     }
     .hero {
         position: relative;
         margin: 0;
         color: #fff;
+        height: 680px;
+        background: transparent url(../images/home.jpg) no-repeat top left;
+        background-size: 100%;
+        .hero-cta {
+            a {
+                color: #fff;
+                font-size: 16px;
+            }
+            position: absolute;
+            top: 180px;
+            right: 20px;
+            text-align: right;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 3px;
+            p {
+                padding: 0px 0 3px;
+                line-height: 1em;
+                margin-bottom: 0px;
+                font-size: 38px; 
+                font-weight: bold;
+                border-bottom: 2px solid #fff;
+
+            }
+        }
         .search {
             position: absolute;
-            margin: 13% 0 0 10%;
+            margin: 22% 0 0 10%;
             h2 {
                 color: #fff;
                 margin: 0px 0 10px 0;
@@ -232,15 +317,12 @@ header {
                 } 
             }
         }
-        height: 400px;
-        background: transparent url(http://placehold.it/1200x600) no-repeat top left;
-        background-size: 100%;
         .caption-location {
             position: absolute;
             right: 20px;
             bottom: 20px;
             a {
-                color: #fff;
+                color: $green;
                 text-decoration: none;
             }
         }
@@ -497,6 +579,17 @@ header {
     }
 
     .whyg {
+        text-align: center;
+        .whyg-desc {
+            padding: 20px;
+            text-align: left;
+            h2 {
+                margin-bottom: 5px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
         div {
             h3 {
                 font-size: 20px;
@@ -506,7 +599,7 @@ header {
             }
             display: inline-block;
             vertical-align: top;
-            width: 30%;
+            width: 400px;
             margin-right: 40px;
             &:last-of-type {
                 margin-right: 0;
@@ -521,7 +614,7 @@ header {
     height: 90px;
     padding: 15px 20px;
     position: fixed;
-    z-inde: 99;
+    z-index: 999;
     bottom: 0;
     right: -530px;
     @include transition(right 1s ease-in-out);
@@ -614,8 +707,7 @@ header {
         list-style-type: none;
         max-width: 100%;
         outline: none;
-        line-height: 100%;
-        height: 500px;
+        height: 480px;
         * {
             border: 0;
             padding: 0px;
@@ -624,10 +716,9 @@ header {
             list-style-type: none;
             max-width: 100%;
             outline: none;
-            line-height: 100%;
         }
         .ts-main-wrapper {
-            width: 1170px;
+            width: 1120px;
             height: 100%;
             margin: 0 auto;
             position: relative;
@@ -705,7 +796,7 @@ header {
                         }
                         &.icons-Local {
                             height: 70px;
-                            background-position: -22px -272px;
+                            background-position: -22px -265px;
                         }
                         &.icons-Family {
                             height: 70px;
@@ -717,7 +808,7 @@ header {
                     }
                     .ts-close {
                         position: absolute;
-                        right: 0px;
+                        right: 5px;
                         top: -30px;
                         z-index: 5;
                         width: 30px;
@@ -749,16 +840,20 @@ header {
                             @include transition(margin-left .4s ease-in-out);
                         }
                         .ts-desc {
-                            bottom: 0;
+                            bottom: 10px;
                             @include transition(bottom .4s ease-in-out);
                         }
                         .ts-close {
                             position: absolute;
-                            top: 0px;
-                            @include transition(top .4s ease-in-out);
+                            top: 5px;
+                            @include transition(top .4s ease-in-out .2s);
+                            &:hover {
+                                opacity:.7;
+                                @include transition(opacity .4s ease-in-out .2s);
+                            }
                         }
                         h2 { 
-                            padding-left: 20px;
+                            margin-left: 10px;
                             @include transition(padding-left .4s ease-in-out);
                             z-index: 3;
                         }
@@ -832,15 +927,26 @@ header {
 }
 
 .ypadding { 
-    padding-top: 40px;
-    margin-top: 125px; }
+    padding-top: 0px;
+    margin-top: 0px; }
 
 .content p {
-    margin-bottom: 20px; }
+    margin-bottom: 20px; 
+    font-size: 16px;
+    line-height: 1.8em;}
 
 .sticky { 
     position: fixed; 
     top: 0; 
+}
+
+.row-header {
+    text-align: center;
+    max-width: 1150px;
+    margin: 0 auto;
+    h2 {
+        margin-bottom: 15px;
+    }
 }
 
 /* Custom page footer */

@@ -47,20 +47,6 @@
                 "desc" : "this is the description",
                 "tour" : "Thailand",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"
-            },
-            {
-                "title" : "This is the list reason two",
-                "img" : "http://placehold.it/350x200",
-                "desc" : "this is the description",
-                "tour" : "Croatia",
-                "path" : "https://www.gadventures.com/destinations/asia/thailand/"
-            },
-            {
-                "title" : "This is reason three",
-                "img" : "http://placehold.it/350x200",
-                "desc" : "this is the description",
-                "tour" : "Sri Lanka",
-                "path" : "https://www.gadventures.com/destinations/asia/sri-lanka/"
             }
         ]
     }]

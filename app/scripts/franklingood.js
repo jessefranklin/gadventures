@@ -11,7 +11,7 @@ function init(){
 			xMedia = '<img src="'+t[i].bgimg+'" class="imgOverlay" />';
 			if(t[i].video) {
 				isVideo = 'vContent';
-				xVideo = '<iframe id="video'+[i]+'" src="//player.vimeo.com/video/'+t[i].video+'?api=1&title=0&amp;byline=0&amp;portrait=0" width="100%" height="130%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+				xVideo = '<iframe id="video'+[i]+'" src="//player.vimeo.com/video/'+t[i].video+'?api=1" width="100%" height="131%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 			} else {
 				isVideo = ' ';
 				xVideo = ' ';
@@ -72,7 +72,7 @@ $(document).on('click','.ts-next', function(){
 
 $(document).on('click','.vContent img', function(){
 	if(act === 1){
-		$(this).hide();
+		$(this).fadeOut(1400);
 		$('.video-container').show();
 		iframe = document.getElementById('video'+v);
 		player = $f(iframe);
