@@ -1,4 +1,5 @@
 'use strict';
+
 var previewWidth, g, v, tsTotal, tsw, act = 0, num = 0, iframe, player;
 
 function init(){
@@ -21,6 +22,7 @@ function init(){
 			
 			tiles.push('<li style="width:'+previewWidth+'px; left: '+(previewWidth * i)+'px" class="x'+t[i].ttl+' '+isVideo+'" data-index="'+i+'">'+
 				'<a class="ts-close"></a>'+
+				'<a class="video-play"><span class="glyphicon glyphicon-play-circle"></span> Play Video</a>'+
 				'<div class="media-container">'+xMedia+'</div>'+
 				'<div class="video-container">'+xVideo+'</div>'+
 				'<h2 class="icons-'+t[i].ttl+' title-icon" title="'+t[i].ttl+'">'+t[i].ttl+'</h2>'+

@@ -9,11 +9,15 @@ function hideNav(){
 	}
 }
 
+var parallax = document.getElementById('para'),
+	speed = -4;
 
 $(document).ready(function(){
 
 	var offsetYnav = document.querySelector('.menu').offsetTop,
 		offsetYSubscribe = 1200,
+		offsetYSearch = 400,
+		offsetYBreak = document.querySelector('.break').offsetTop,
 		scrollTimeout = null;
 
 	function scroll () {
@@ -39,6 +43,20 @@ $(document).ready(function(){
 			$('.convert').addClass('slide');
 		} else {
 			$('.convert').removeClass('slide');
+		}
+
+		//This is for the subscribe newsletter flyout
+		if($(window).scrollTop() >= offsetYSearch) {
+			$('.navbar-form').addClass('show');
+		} else {
+			$('.navbar-form').removeClass('show');
+		}
+
+		var xy = $(window).height();
+		
+		if(($(window).scrollTop()+xy) >= offsetYBreak && offsetYBreak >= ($(window).scrollTop()-300)) {
+			var yOffset = window.pageYOffset;
+			parallax.style.backgroundPosition='0px '+(yOffset/speed)+'px';
 		}
 	}
 

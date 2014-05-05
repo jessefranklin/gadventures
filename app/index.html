@@ -16,6 +16,7 @@
         <!-- endbuild -->
         <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -28,35 +29,48 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
-            
-            <ul class="utility nav-pills pull-right">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-            <div class="icons-gadventures logo">g adventures</div>
-            <!-- <form class="navbar-form navbar-left" >
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Where do you want to go?" />
-                </div>
-                    <a href="#" class="btn btn-default">Go</a>
-            </form> 
-            <a href="#" class="phone">1 888 800 4100</a>
-            -->
-            <div class="menu">
-                <a href="#" class="icons-gflag flag"></a>
+    <header>
+        
+        <ul class="utility nav-pills pull-right">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <div class="icons-gadventures logo">g adventures</div>
+        
+        <a href="#" class="phone">1 888 800 4100</a>
+       
+        <div class="menu">
+            <a href="#" class="icons-gflag flag"></a>
             <ul>
                 <li><a href="story.html">Destinations</a></li>
                 <li><a href="#">Travel Styles</a></li>
                 <li><a href="#">Specials</a></li>
             </ul>
-            </div>
-        </header>
+            <div class="col-sm-2 col-md-3 pull-right">
+                <form class="navbar-form search-inline" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control " placeholder="Search" name="srch-term" id="srch-term">
+                        
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </header>
 
 
-        <div class="content">
+   
+
+
+<div class="content">
             <div class="row hero">
+                <div class="hero-cta">
+                    <a href="#">
+                        <span>starting from</span>
+                        <p>$1999</p>
+                        <span>this week only</span>
+                    </a>
+                </div>
                 <div class="search col-xs-8">
                     <h2>It all starts here</h2>
                     <div class="search-row">
@@ -77,7 +91,7 @@
             </div>
 
 
-
+<!--
             <article class="row listers">
                     <h2>Featured in our blog</h2>
                     <p>Weekly featured tours for seasonal and event reason.</p>
@@ -89,206 +103,55 @@
                     </div>
             </article>
 
-            <!--
-            <article class="row whyg">
-                    <h2>Why <em>G Adventures</em></h2>
-                    <p>From adventure to luxury, travel styles accesible to all types or travellers.</p>
-                     <iframe width="460" height="255" src="//www.youtube.com/embed/Ht8uyer6co8" frameborder="0" allowfullscreen></iframe>
+-->
+<article class="row whyg">
+    
+    <iframe src="//player.vimeo.com/video/92182212?title=0" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 
-                    <div class="intro-block">
-                        Something about how the money stays in the communities you visit.
-                    </div>
-                    <a href="#" class="btn btn-default"> Find the right Travel Style for you </a>
-            </article>
+    <div class="whyg-desc">
+        <h2>This is your planet. Introduce yourself.</h2>
+        <p>Travelling with G Adventures is the very best way to get up close and personal with your planet in a way you’d never manage on your own. For more than 20 years, we’ve brought together people from all over the globe to create lifelong connections. This is your planet, after all—and the better you get to know it, the more it'll give you in return.</p>
+        
+        <a href="#" class="btn btn-default"> Find the right Travel Style for you </a>
+    </div>
+</article>
 
+<article id="para" class="row break">
+    <p>"Travelling with G Adventures is the very best way to get up close and personal with your planet in a way you’d never manage on your own. For more than 20 years, we’ve brought together people from all over the globe to create lifelong connections. This is your planet, after all—and the better you get to know it, the more it'll give you in return."</p>
+    <p>@franklingood</p>
+</article>
 
-            <article class="row travel-styles">
-                    <h2>What <em>Travel Style</em> fits you best?</h2>
-                    <p>From adventure to luxury, travel styles accesible to all types or travellers.</p>
-                    <div class="leadins">
-                        <a href="#">
-                            <img src="http://placehold.it/220x150" />
-                            <h3>Marine</h3>
-                            <p>While all of our marine adventures are unique, they share the same spirit of exploration.</p>
-                        </a>
-                        <a href="#">
-                            <img src="http://placehold.it/220x150" />
-                            <h3>Family</h3>
-                            <p>Just because you’ve had kids doesn’t mean your adventuring days are through. </p>
-                        </a>
-                        <a href="#">
-                            <img src="http://placehold.it/220x150" />
-                            <h3>Comfort</h3>
-                            <p>Looking for a little extra from your adventure but don’t want to skip out on all the genuine exp?</p>
-                        </a>
-                        <a href="#">
-                            <img src="http://placehold.it/220x150" />
-                            <h3>Yolo</h3>
-                            <p>You’re only young once, but you can be young-at-heart forever. That powers our Yolo trips.</p>
-                        </a>
-                    </div>
-                    <a href="#" class="btn btn-default"> Find the right Travel Style for you </a>
-            </article>
+ <section class="ts-slider">
+        <div class="margint60">
+            <div class="row">
+                <div class="span12">
+                    <div class="row-header">
+                            <h2>Whatever your style, see it your way.</h2>
+                            <p>Everyone loves to travel, but not everyone loves to travel the same way. G Adventures Travel Styles gather trips of a feather together so you can spend less time searching and more time dreaming about where you’ll go next.</p>
+                        </div>
+                    <div class="ts-container">
+                        <div class="ts-main-wrapper">
 
-            <article class="row video-gallery">
-                    <h2>Video Gallery</h2>
-                    <p>Get to know G, Our videos are a great place to start.</p>
-
-                    <iframe width="560" height="315" src="//www.youtube.com/embed/Ht8uyer6co8" frameborder="0" allowfullscreen></iframe>
-
-                    <div class="video-block">
-                        <a href="">
-                            <img src="http://placehold.it/150x100" />
-                            <h3>Meet our Guides</h3>
-                        </a>
-
-                        <a href="">
-                            <img src="http://placehold.it/150x100" />
-                            <h3>Your world in 7 Seconds</h3>
-                        </a>
-
-                        <a href="">
-                            <img src="http://placehold.it/150x100" />
-                            <h3>What will you do today? for tomorrow</h3>
-                        </a>
-
-                        <a href="">
-                            <img src="http://placehold.it/150x100" />
-                            <h3>You'll never forget it</h3>
-                        </a>
-                    </div>
-            </article>
-
-            <article class="row featured-trip">
-                    <h2>Featured Trip</h2>
-                    <p>Weekly featured tours for seasonal and event reason.</p>
-                    <div class="trip">
-                        <img src="http://placehold.it/450x200" />
-                        <h3>Highlights of Brazil</h3>
-                        <h4>18 Days for $1400.00</h4>
-                        <p>A land awash in ancient history, mind-boggling landscapes, entrancing culture, and non-stop fun, there’s a side of South America that’s perfect for every traveller – including you. The colossal peaks of Patagonia and the Andes beg to be climbed, while the enveloping rainforests that surround the mighty Amazon seem designed to be explored.</p>
-                    </div>
-                    <div class="testimonial">
-                        <h4>What people are saying</h4>
-                        <p><strong>Went on the Lares Trek --amazing! Loved that there were only 7 people in our group and did not run into any other group.</strong></p>
-                        <p>Full day, guided tour of the Sacred Valley and Ollantaytambo ruins. Shopping opportunities at a local market.</p>
-                        <p>Full day, guided tour of the Sacred Valley and Ollantaytambo ruins. Shopping opportunities at a local market.</p>
-                    </div>
-            </article>
-
-            
-
-            <article class="row lists">
-                    <h2>Cause you love lists</h2>
-                    <p>Weekly featured tours for seasonal and event reason.</p>
-                    <div class="list">
-                        <img src="http://placehold.it/350x200" />
-                        <h3>Where spring is summer</h3>
-                        <ol>
-                            <li><a href=""><h4>Mexico: Cities, Cuisine &amp; Ruins</h4> 15 days $1104</a></li>
-                            <li><a href=""><h4>Belize &amp; Tikal Adventure</h4> 15 days $1104</a></li>
-                            <li><a href=""><h4>Southern Highlights</h4> 15 days $1104</a></li>                            
-                        </ol>
-                    </div>
-
-                    <div class="list">
-                        <img src="http://placehold.it/350x200" />
-                        <h3>Best places in April</h3>
-                        <ol>
-                            <li><a href=""><h4>Egypt Explorer</h4> 15 days $1104</a></li>
-                            <li><a href=""><h4>Australia in Style</h4> 15 days $1104</a></li>
-                            <li><a href=""><h4>Egypt and Jordan Explorer</h4> 15 days $1104</a></li>
-                        </ol>
-                    </div>
-
-                    <div class="list">
-                        <img src="http://placehold.it/350x200" />
-                        <h3>Seasonally Most Popular</h3>
-                        <ol>
-                            <li><a href=""><h4>Thailand Family Adventure</h4> 15 days $1104</a></li>
-                            <li><a href=""><h4>Vietnam Hike, Bike &amp; Kayak</h4> 15 days $1104</a></li>
-                            <li><a href=""><h4>Everest Adventure</h4> 15 days $1104</a></li>
-                        </ol>
-                    </div>
-            </article>
-
-            <article class="row recommended">
-                    <h2>Whats new</h2>
-                    <p>Weekly featured tours for seasonal and event reason.</p>
-                     <a href="">
-                        <img src="http://placehold.it/200x150" />
-                        <h3>India</h3>
-                        <p>Weekly featured tours for seasonal and event reason.</p>
-                    </a>
-
-                    <a href="">
-                        <img src="http://placehold.it/200x150" />
-                        <h3>Mexico</h3>
-                        <p>Weekly featured tours for seasonal and event reason.</p>
-                    </a>
-
-                    <a href="">
-                        <img src="http://placehold.it/200x150" />
-                        <h3>Canada</h3>
-                        <p>Weekly featured tours for seasonal and event reason.</p>
-                    </a>
-
-                    <a href="">
-                        <img src="http://placehold.it/200x150" />
-                        <h3>Croatia</h3>
-                        <p>Weekly featured tours for seasonal and event reason.</p>
-                    </a>
-            </article>
-
-            <article class="row destinations">
-                    <h2>Destinations</h2>
-                    <p>Weekly featured tours for seasonal and event reason.</p>
-                    <img src="http://placehold.it/450x220" />
-                    <ul>
-                        <li><a href="">Polar</a></li>
-                        <li><a href="">North America</a></li>
-                        <li><a href="">Central America</a></li>
-                        <li><a href="">South America</a></li>
-                        <li><a href="">Europe</a></li>
-                        <li><a href="">Middle East</a></li>
-                        <li><a href="">Africa</a></li>
-                        <li><a href="">Asia</a></li>
-                        <li><a href="">Oceana</a></li>
-                    </ul>
-            </article>
-
-            <article class="row social-feed">
-                    <h2>On Social</h2>
-                    <blockquote>The world opens up a little more to a small group than it does to an individual traveller or a big-bus tour. A small group is just big enough to offer security, access, and the camaraderie that comes with travelling with new people, and just small enough to feel intimate and not overwhelming to you or the place you’re visiting.</blockquote>
-                    <p>@FranklinGood</p>
-            </article>
-
-            <article class="row whyg">
-                    <h2>Why <em>G Adventures</em></h2>
-                    <p>Weekly featured tours for seasonal and event reason.</p>
-                    <div>
-                        <h3>Small-groups or Independent</h3>
-                        <p>The world opens up a little more to a small group than it does to an individual traveller or a big-bus tour. A small group is just big enough to offer security, access, and the camaraderie that comes with travelling with new people, and just small enough to feel intimate and not overwhelming to you or the place you’re visiting.</p>
-                    </div>
-                    <div>
-                        <h3>Adventure redefined</h3>
-                        <p>Adventure travel is more than a vacation. It’s a way to make a profound connection with the world you live in. Adventure travel is about active exploration, cultural immersion, embracing the unexpected, escaping the well-trod path, and learning about a destination from the people who know it best: those who live there.</p>
-                    </div>
-                    <div>
-                        <h3>Why G Adventures</h3>
-                        <p>We’ve been doing this for over 20 years. Our groups are diverse and bring together travellers from all over the world. Our trips are led by expert Chief Experience Officers (CEOs) who draw the most out of their destinations.</p>
-                    </div>
-                    <a href="" class="btn btn-default">More</a>
-            </article>-->
-
-            <div class="convert">
-                <span class="glyphicon glyphicon-remove"></span>
-                <img src="http://placehold.it/60x60" />
-                <h5>Get a Free Adventure Tour Guide</h5>
-                <input type="text" class="form-control" placeholder="Email Address"/>
-                <a href="#" class="btn btn-default">Get it</a>
+                            <a class="ts-prev"></a>
+                            <a class="ts-next"></a>
+                            <ul class="ts-list live">
+                            </ul>
+                        </div>
+                     </div>
+                </div>  
             </div>
-            
+        </div>
+    </section>
+ 
+
+<div class="convert">
+    <span class="glyphicon glyphicon-remove"></span>
+    <img src="http://placehold.it/60x60" />
+    <h5>Get a Free Adventure Tour Guide</h5>
+    <input type="text" class="form-control" placeholder="Email Address"/>
+    <a href="#" class="btn btn-default">Get it</a>
+</div>
+
 
             <div class="footer">
                 <p><span class="glyphicon glyphicon-heart"></span> franklinGood</p>
@@ -302,6 +165,7 @@
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -330,6 +194,8 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/froogaloop.min.js"></script>
+        <script src="scripts/franklinGood.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -49,6 +49,19 @@ h1, h2, h3 {
         }
     }
 }
+.content article.break {
+        background:transparent url(../images/home.jpg) no-repeat top left;
+        background-size: 100%;
+        background-position: -300px 0;
+        color:#fff;
+        width: 100%;
+        margin-bottom: 60px; 
+        p {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+}
 
 h2 {
     font-size: 36px;
@@ -121,7 +134,6 @@ header {
     }
     .menu {
         padding: 10px 20px;
-       /* background:rgba($purple,0.4); */
         background:rgba($purple,0.4);
         display: block;
         clear: both;
@@ -140,6 +152,12 @@ header {
             margin-top: 4px;
             padding-right: 0px;
             .navbar-form {
+                opacity: 0;
+                @include transition(opacity .4s ease-in-out);
+                &.show {
+                    opacity: 1;
+                    @include transition(opacity .4s ease-in-out);
+                } 
                 margin-top: 0px;
                 width: 100%;
                 float: right;
@@ -237,6 +255,7 @@ header {
                 line-height: 1em;
                 margin-bottom: 0px;
                 font-size: 38px; 
+                color:#fff;
                 font-weight: bold;
                 border-bottom: 2px solid #fff;
 
@@ -280,7 +299,7 @@ header {
                 vertical-align: top;
             }
             .advanced-search {
-                color: $lightgrey;
+                color: $green;
                 margin-top: -6px;
                 &:hover {
                     color: $orange;
@@ -321,7 +340,7 @@ header {
             right: 20px;
             bottom: 20px;
             a {
-                color: $green;
+                color: $orange;
                 text-decoration: none;
             }
         }
@@ -580,7 +599,7 @@ header {
     .whyg {
         text-align: center;
         .whyg-desc {
-            padding: 20px;
+            padding: 20px 20px 20px 30px;
             text-align: left;
             h2 {
                 margin-bottom: 5px;
@@ -814,6 +833,20 @@ header {
                         height: 30px;
                         background: transparent url(../images/travel-style-sprite.png) no-repeat -40px -500px;
                     }
+                    .video-play {
+                        position: absolute;
+                        z-index: 5;
+                        bottom: 45%;
+                        right: 40%;
+                        width: 200px;
+                        color: #fff;
+                        font-size: 30px;
+                        font-family: 'Roboto Slab', serif; 
+                        opacity: 0;
+                        span {
+                            margin-top: 2px;
+                        }
+                    }
                     &.zin {
                         z-index: 3;
                         overflow: visible;
@@ -849,6 +882,12 @@ header {
                             &:hover {
                                 opacity:.7;
                                 @include transition(opacity .4s ease-in-out .2s);
+                            }
+                        }
+                        &.vContent {
+                            .video-play {
+                                opacity:.7;
+                                @include transition(opacity .4s ease-in-out .6s);
                             }
                         }
                         h2 { 
