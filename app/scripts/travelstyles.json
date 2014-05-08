@@ -7,7 +7,7 @@
             {
                 "ttl" : "YOLO",
                 "tslogo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/classic.jpg",
+                "bgimg" : "images/slider/YOLO.jpg",
                 "video" : "93107965",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
@@ -16,7 +16,7 @@
             {
                 "ttl" : "Active",
                 "ts-logo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/comfort.jpg",
+                "bgimg" : "images/slider/ACTIVE.jpg",
                 "video" : "92182212",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
@@ -25,7 +25,7 @@
             {
                 "ttl" : "Classic",
                 "tslogo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/family.jpg",
+                "bgimg" : "images/slider/CLASSIC.jpg",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"
@@ -33,7 +33,7 @@
             {
                 "ttl" : "Family",
                 "tslogo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/costa.jpg",
+                "bgimg" : "images/slider/FAMILY.jpg",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"
@@ -41,7 +41,7 @@
             {
                 "ttl" : "Marine",
                 "tslogo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/italy.jpg",
+                "bgimg" : "images/slider/MARINE.jpg",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"
@@ -49,7 +49,7 @@
             {
                 "ttl" : "Comfort",
                 "tslogo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/tanzania.jpg",
+                "bgimg" : "images/slider/COMFORT.jpg",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"
@@ -57,7 +57,7 @@
             {
                 "ttl" : "Local Living",
                 "tslogo" : "http://placehold.it/250x150",
-                "bgimg" : "images/carousel/turkey.jpg",
+                "bgimg" : "images/slider/LOCALLIVING.jpg",
                 "desctitle" : "this is the description title",
                 "desc" : "this is the description",
                 "path" : "https://www.gadventures.com/destinations/asia/thailand/"

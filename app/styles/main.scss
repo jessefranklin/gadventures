@@ -256,7 +256,7 @@ header {
                 line-height: 1em;
                 margin-bottom: 0px;
                 font-size: 38px; 
-                color:#fff;
+                color:$orange;
                 font-weight: bold;
                 border-bottom: 2px solid #fff;
 
@@ -300,7 +300,7 @@ header {
                 vertical-align: top;
             }
             .advanced-search {
-                color: $green;
+                color: $orange;
                 margin-top: -6px;
                 &:hover {
                     color: $orange;
@@ -629,9 +629,9 @@ header {
 
 .convert {
     width: 530px;
-    background: $darkgrey;
+    background:rgba($darkgrey,0.7);
     height: 90px;
-    padding: 15px 20px;
+    padding: 15px 20px 15px 25px;
     position: fixed;
     z-index: 999;
     bottom: 0;
@@ -643,7 +643,7 @@ header {
     h5 {
         color: #fff;
         margin-right: 15px;
-        max-width: 100px;
+        max-width: 180px;
     }
     img, h5, p, input, a {
         display: inline-block;
@@ -868,6 +868,8 @@ header {
                         &.xFamily .media-container img,
                         &.xYOLO .media-container img,
                         &.xLocal .media-container img,
+                        &.xClassic .media-container img,
+                        &.xMarine .media-container img,
                         &.xComfort .media-container img {
                             margin-left:0px;
                             @include transition(margin-left .4s ease-in-out);
@@ -904,23 +906,31 @@ header {
 }
 
 .xActive .media-container img {
-    margin-left:-800px;
+    margin-left:-230px;
     @include transition(margin-left .4s ease-in-out);
 }
 .xFamily .media-container img {
-    margin-left:-420px;
+    margin-left:-360px;
     @include transition(margin-left .4s ease-in-out);
 }
 .xYOLO .media-container img {
-    margin-left:-420px;
+    margin-left:-740px;
     @include transition(margin-left .4s ease-in-out);
 }
-.xLocal .media-container img {
+.xMarine .media-container img {
     margin-left:-760px;
     @include transition(margin-left .4s ease-in-out);
 }
+.xLocal .media-container img {
+    margin-left:-250px;
+    @include transition(margin-left .4s ease-in-out);
+}
 .xComfort .media-container img {
-    margin-left:-540px;
+    margin-left:-720px;
+    @include transition(margin-left .4s ease-in-out);
+}
+.xClassic .media-container img {
+    margin-left:-520px;
     @include transition(margin-left .4s ease-in-out);
 }
 .ts-desc {

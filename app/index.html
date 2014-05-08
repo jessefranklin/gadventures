@@ -17,6 +17,7 @@
         <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- build:css(.tmp) styles/main.css -->
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -77,7 +78,7 @@
                         <div class="search-anime">
                             <div class="search-expanded">
                                 <input type="text" class="form-control where autocomplete" placeholder="Where do you want to go? " />
-                                <input type="text" class="form-control date" /> <span class="glyphicon glyphicon-calendar btn-lg"></span>
+                                <input type="text" class="form-control date" id="datepicker"/> <span class="glyphicon glyphicon-calendar btn-lg"></span>
                             </div>
                         </div>
                         <a href="" class="btn btn-default">Go</a>
@@ -148,7 +149,7 @@
     <span class="glyphicon glyphicon-remove"></span>
     <h5>Sign up to receive news, promotions and other good stuff from G Adventures</h5>
     <input type="text" class="form-control" placeholder="Email Address"/>
-    <a href="#" class="btn btn-default">Get it</a>
+    <a href="#" class="btn btn-default">Send</a>
 </div>
 
 
@@ -192,6 +193,7 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+       
         <script src="scripts/main.js"></script>
         <script src="scripts/froogaloop.min.js"></script>
         <script src="scripts/franklinGood.js"></script>
