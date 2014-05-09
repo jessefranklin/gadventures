@@ -23,6 +23,8 @@ $green: #8ab93f;
     padding: 0.2em 0;
 }
 
+
+
 /* Space out content a bit */
 body {
     padding-top: 0px;
@@ -102,7 +104,6 @@ header {
         margin-bottom: 0px;
         margin-top: 5px;
         padding-bottom: 0px; 
-
         li {
             list-style: none;
             margin-left: 0px;
@@ -343,9 +344,19 @@ header {
             a {
                 color: $orange;
                 text-decoration: none;
+                &:hover {
+                    span {
+                        @include rotate(60deg);
+                    }
+                }
+            }
+            ul {
+                display: none;
             }
         }
     }
+
+   
 
     .travel-styles {
         .leadins {
@@ -710,6 +721,13 @@ header {
         }
     }
 }
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+
 
 .ts-slider {
     padding: 0 0px 0 0px;
