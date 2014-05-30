@@ -40,9 +40,9 @@ $(document).ready(function(){
 
 		//This is for the subscribe newsletter flyout
 		if($(window).scrollTop() >= offsetYSubscribe) {
-			$('.convert').addClass('slide');
+			$('.newsletter-slider').addClass('slide');
 		} else {
-			$('.convert').removeClass('slide');
+			$('.newsletter-slider').removeClass('slide');
 		}
 
 		//This is for the subscribe newsletter flyout

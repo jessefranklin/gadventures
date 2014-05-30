@@ -37,14 +37,24 @@
             <li><a href="#">Register</a></li>
             <li><a href="#">Help</a></li>
         </ul>
-        <div class="icons-gadventures logo">g adventures</div>
-        
+        <a href="#" class="icons-gadventures logo">g adventures</a>
+            <ul class="header-menu">
+                <li><a href="trip-summary.html"><span>Destinations</span>
+                    This is your planet. Get to know it.
+                </a></li>
+                <li><a href="#"><span>Travel Styles</span>
+                    Whatever your style, see it your way.
+                </a></li>
+                <li><a href="#"><span>Specials</span>
+                    Last minute deals and Promotions
+                </a></li>
+            </ul>
         <a href="#" class="phone">1 888 800 4100</a>
-       
+        <input type="text" class="header-search" placeholder="Where do you want to go?" name="srch-term" id="srch-term">
         <div class="menu">
             <a href="#" class="icons-gflag flag"></a>
             <ul>
-                <li><a href="story.html">Destinations</a></li>
+                <li><a href="trip-summary.html">Destinations</a></li>
                 <li><a href="#">Travel Styles</a></li>
                 <li><a href="#">Specials</a></li>
             </ul>
@@ -65,13 +75,13 @@
 
 <div class="content">
             <div class="row hero">
-                <div class="hero-cta">
+                <!-- <div class="hero-cta">
                     <a href="#">
                         <span>starting from</span>
                         <p>$1999</p>
                         <span>this week only</span>
                     </a>
-                </div>
+                </div> -->
                 <div class="search col-xs-8">
                     <h2>It all starts here</h2>
                     <div class="search-row">
@@ -83,7 +93,8 @@
                         </div>
                         <a href="" class="btn btn-default">Go</a>
                     </div>
-                    <a href="" class="advanced-search"><span class="glyphicon glyphicon-cog"></span> Advanced Search options</a> 
+                    <a href="" class="advanced-search"><span class="glyphicon glyphicon-cog"></span> Advanced search</a> 
+                    <a href="" class="advanced-search"><span class="glyphicon glyphicon-search"></span> Browse all our tours</a> 
                 </div>
                 <div class="caption-location">
                     <a href="trip-details.html">Playa del Caremen, Mexico 
@@ -112,8 +123,6 @@
 -->
 <article class="row whyg">
     
-    <iframe src="//player.vimeo.com/video/92182212?title=0" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-
     <div class="whyg-desc">
         <h2>This is your planet. Introduce yourself.</h2>
         <p>Travelling with G Adventures is the very best way to get up close and personal with your planet in a way you’d never manage on your own. For more than 20 years, we’ve brought together people from all over the globe to create lifelong connections. This is your planet, after all—and the better you get to know it, the more it'll give you in return.</p>
@@ -149,14 +158,29 @@
         </div>
     </section>
  
-
-<div class="convert">
+<!--
+<div class="newsletter-slider">
     <span class="glyphicon glyphicon-remove"></span>
-    <h5>Sign up to receive news, promotions and other good stuff from G Adventures</h5>
-    <input type="text" class="form-control" placeholder="Email Address"/>
-    <a href="#" class="btn btn-default">Send</a>
+    <h5>Sign up <sub>for emails</sub></h5>
+    <div class="subscribe-form">
+        <a class='ft-profile-newsletter' href="{% url 'profile_subscriptions' %}?ref=footer-nosubmit" title='G Adventures Newsletters'></a>
+        <a class='news-sub' href="{% url 'profile_subscriptions' %}?ref=footer-nosubmit">Newsletter Subscriptions</a>
+        
+         <div class="input-group">
+          <input type="text" class="form-control" placeholder="Email">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Submit</button>
+          </span>
+        </div>
+    </div>
+    <a href="#" class="request-brochure">
+        <h5>Request <sub>a brochure</sub></h5>
+        <div class="brochure-thumbnail">
+            <img src="/images/brochure-thumb.png" />
+        </div>
+    </a>
 </div>
-
+-->
 
             <div class="footer">
                 <p><span class="glyphicon glyphicon-heart"></span> franklinGood</p>

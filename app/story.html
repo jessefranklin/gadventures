@@ -16,6 +16,7 @@
         <!-- endbuild -->
         <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/animate.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -23,19 +24,14 @@
         <!-- endbuild -->
 
     </head>
-    <body>
+    <body class="story">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <header>
             
-            <ul class="utility nav-pills pull-right">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-            <div class="icons-gadventures logo">g adventures</div>
+            
             <!-- <form class="navbar-form navbar-left" >
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Where do you want to go?" />
@@ -46,199 +42,335 @@
             -->
             <div class="menu">
                 <a href="#" class="icons-gflag flag"></a>
-            <ul>
-                <li><a href="story.html">Destinations</a></li>
-                <li><a href="#">Travel Styles</a></li>
-                <li><a href="#">Specials</a></li>
-            </ul>
             </div>
         </header>
 
-
+        <ul class="vertnav">
+          <li data-scrollto="one"><div class="btn">Active Video</div></li>
+          <li data-scrollto="two"><div class="btn">Meet Marc</div></li>
+          <li data-scrollto="three"><div class="btn">Active Features</div></li>
+          <li data-scrollto="four"><div class="btn">Photo Gallery</div></li>
+        </ul>
         <div class="content">
-
             <div class="row stage">
-                <div class="scene">
-                    <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="false">
-                      <!-- Indicators 
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-one" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-one" data-slide-to="1"></li>
-                        <li data-target="#carousel-one" data-slide-to="2"></li>
-                      </ol>-->
+                <div class="scene video one">
+                  
+                    <div class="text intro-video">
+                    <div class="active-logo"></div>  
+                      <p>Hike, bike, and kayak your world </p>
+                      <a class="btn btn-default">Explore our active tours</a>
+                      
+                      <!-- <a class="btn play-video">Play the active video</a>
+                      <a class="btn stop-video" style="display:none;">Stop the active video</a> -->
+                    </div>
+                    
+                    <iframe id="video" src="https://player.vimeo.com/video/91550668?autoplay=0&loop=1&mute=1&api=1" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="break-scene whatis brown">
+                  <div class="pull">
+                   <p>You don't have to be a decathlete to take an Active trip, just someone with a healthy love for getting active and the outdoors.</p>
 
-                      <!-- Wrapper for slides -->
+                  </div>
+
+                </div>
+
+                <div class="scene character two">
+                    <div class="text intro-char animated">
+                      <p class="int">Meet Marc</p>
+                      <p>Marc wanted to do stuff, not just see stuff, so we put him on a bike and turned him loose on northwest China.</p>
+                      <!-- <a class="btn" data-obj="qualifier">+ Are you an Active Traveller?</a> -->
+                      <a class="video-callout">
+                      <span class="icons-video"></span>
+                      Watch Marcs Video
+                    </a>
+                    </div>
+                    <div class="int-video">
+                      <a class="video-close"><span class="glyphicon glyphicon-remove"></span></a>
+                      <iframe id="video" src="https://player.vimeo.com/video/91550668?autoplay=0&loop=1&mute=1" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    
+                    <img src="images/active/marc.jpg" alt="..." class="bg-img">
+                </div>
+                
+                <div class="scene char-quote">
+                    <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="false">
+                      
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel1" data-slide-to="1"></li>
+                        <li data-target="#carousel1" data-slide-to="2"></li>
+                        <li data-target="#carousel1" data-slide-to="3"></li>
+                        <li data-target="#carousel1" data-slide-to="4"></li>
+                      </ol>
+
                       <div class="carousel-inner">
+
                         <div class="item active">
-                          <img src="http://placehold.it/1200x600" alt="...">
-                          <div class="carousel-caption">
+                          
+                           <div class="contain">
+                            <p class="testi"><span class="qmark">&ldquo;</span>For me, exploration is about getting out into the thick of things and discovering places others don’t.<span class="qmark">&rdquo;</span>
+                            </p>
+                            <a href="#carousel1" data-slide="next" class="btn">+ Are you an Active Traveller?</a> 
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <a href="#carousel1" data-slide="next" class="icons-right-chev right-ind"></a> 
+                          <div class="contain">
+                             
+                            <div class="icons-are-you"></div>
+                            <div class="desc">
+                              <p class="title">Faster. Higher. Stronger. </p>
+                              <p>We’ve hunted high and low in search of adventures that engage the muscles as much as the mind and heart. Biking, hiking, whitewater rafting, dog-sledding, and other holy-moly-I-can’t-believe-I-did-that activities await.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <a href="#carousel1" data-slide="next" class="icons-right-chev right-ind"></a> 
+                          <div class="contain"> 
+                            <div class="road">
+                              <div class="icons-transport"></div>
+                            </div>
+                            <div class="desc">
+                              <p class="title">Local transport </p>
+                              <p>Self-propelled travel for the scenic stretches, local rides (buses, taxis, trains, etc) on the longer routes to save time.</p>
+                            </div>
                           </div>
                         </div>
 
                         
+
+                        <div class="item">
+                          <a href="#carousel1" data-slide="next" class="icons-right-chev right-ind"></a> 
+                          <div class="contain">
+                            <div class="accom">
+                              <div class="icons-hotel"></div>
+                            </div>
+                            <div class="desc">
+                              <p class="title">Character-rich lodgings</p>
+                              <p>We pick authentic accommodations that match the environments, from whitewashed Spanish haciendas to camping under the stars on Kilimanjaro.</p>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="item">
+                          <a href="#carousel1" data-slide="next" class="icons-right-chev right-ind"></a> 
+                          <div class="contain">
+                            <div class="tour">
+                              <div class="icons-guider"></div>
+                              <div class="icons-guide"></div>
+
+                            </div>
+                            <div class="desc">
+                              <p class="title">Skilled CEOs & Expert assistance</p>
+                              <p>Your trip’s Chief Experience Officer (CEO) is your guide, translator, coach, historian, bike mechanic, and friend all rolled into one expert package.</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
-                      <!-- Controls 
-                      <a class="left carousel-control" href="#carousel-one" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+<!--
+                      <a class="left carousel-control" href="#carousel1" data-slide="prev">
+                         <span class="icons-left-chev tall-chev"></span>
                       </a>
-                      <a class="right carousel-control" href="#carousel-one" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      <a class="right carousel-control" href="#carousel1" data-slide="next">
+                        <span class="icons-right-chev tall-chev"></span> 
                       </a>
-                      -->
+-->
                     </div>
-
                 </div>
-
-                <div class="scene">
+                 
+                <div class="scene activities three">
                     <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="false">
-                      <!-- Indicators 
+
+                      <!-- Indicators -->
                       <ol class="carousel-indicators">
                         <li data-target="#carousel2" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel2" data-slide-to="1"></li>
                         <li data-target="#carousel2" data-slide-to="2"></li>
-                      </ol>-->
-
+                      </ol>
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
-                        <div class="item active">
-                          <img src="images/china.jpg" alt="...">
-                          <div class="carousel-caption">
-                            <h2>This is a sample title</h2>
-                            <p>This is another title...</p>
-                          </div>
-                          
-                          <!-- Flyout button -->
-                          <a class="btn-flyout call-flyout"></a>
-                          <!-- Flyout overlay -->
-                          <div class="flyout-overlay">
-                              <h3>This is some text for the overlay</h3>
-                              <p>This is some text for the overlay</p>
-                          </div>
 
+                        <div class="item active climb">
+                          <a href="#carousel2" class="icons-axe-pre icon-carousel" data-slide-to="1" ></a>
+                          <div class="text intro-active word-car">
+                            <div class="more-block-contain">
+                              <div class="more-block">
+                              <p class="title"><span>Take it to the limit</span></p>
+                              <p>“Active” covers everything from pleasant mountain strolls and leisurely bike rides through rolling countryside to challenging hikes and demanding off-road rides.</p>
+                              <p>What you get out of an Active trip entirely depends on how much you want to put into it.</p>
+                              <a class="btn" href="#carousel2" data-slide-to="1">Learn about our Physical Rating</a>
+
+                              </div>
+                              <div class="more-block">
+                                <p class="title"><span class="glyphicon glyphicon-signal"></span>Physical Rating</p>
+                                <p> Each trip is assigned a Physical Demand rating to give you an idea of how strenuous the activity will be before you hit the trail.  </p>
+                                <p>All G Adventures trips feature a Physical Demand rating from one to five. All Active trips are rated at three or higher.</p> 
+                                <a class="btn move-this">More</a> 
+                              </div>
+                              <div class="more-block">
+                                <p class="title">It’s a journey, not a race</p>
+                                <p>You don’t need to be an elite endurance athlete to enjoy an Active trip. Many of our itineraries are built for the first-time active traveller and offer a more relaxed (but still athletic) experience.</p><p> We’ll provide you with training guidelines when you book to help you prepare for your specific adventure, and if you’re unsure whether a trip is right for your skill level, just ask and we’ll get your sorted out.</p>
+                                <a class="btn move-back">Back</a>
+                              </div>
+                            </div>
+                          </div>
+                          <img src="images/active/marc-climbing-active.jpg" alt="...">
+
+                           
                         </div>
 
-                        
+                        <div class="item swim">
+                          
+                          <div class="text intro-active">
+                            <p class="title">Physical Rating</p>
+                                <p> Each trip is assigned a Physical Demand rating to give you an idea of how strenuous the activity will be before you hit the trail.  </p>
+                                <p>All G Adventures trips feature a Physical Demand rating from one to five. All Active trips are rated at three or higher.</p> 
+                            <a class="btn" href="#carousel2" data-slide-to="2">Learn about our Activities</a>
+                          </div>
+                          
+                          <img src="images/active/marc-swim-active.jpg" data-src="images/active/marc-swim-active.jpg" alt="...">
+                          
+                        </div>
+
+                        <div class="item bike">
+                          <div class="text intro-active">
+                            <span class="icons-bike icon"></span>
+                            <p class="title">Do more everything</p>
+                            <p>Each itinerary is designed to take advantage of the unique physical characteristics of its setting. There’s an amazing world out there just waiting for you to hike, bike, kayak, raft, swim, snorkel, zipline, rappel, and even dogsled your way through it.</p>
+                           
+                          </div>
+                          
+                          <img src="images/active/marc-bike-active.jpg" data-src="images/active/marc-bike-active.jpg" alt="...">
+                          <div class="carousel-caption">
+                          </div>
+                        </div>
 
                       </div>
 
-                      <!-- Controls 
+                      <!-- Controls -->
                       <a class="left carousel-control" href="#carousel2" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span >&ndash;</span>
                       </a>
                       <a class="right carousel-control" href="#carousel2" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>-->
+                        <span>+</span>
+                      </a>
                     </div>
                 </div>
 
 
-                <div class="scene">
+                 <div class="break-scene whatis orange">
+                  <div class="contain">
+                    <p class="title"><span class="qmark">&ldquo;</span>I felt more connected to the country and its people while riding ... you see, smell, and hear things from a bike that you just can’t from a tour bus.<span class="qmark">&rdquo;</span></p>
+                  </div>
+                </div>
+
+
+                <div class="scene activities photos four">
                     <div id="carousel3" class="carousel slide" data-ride="carousel" data-interval="false">
+
                       <!-- Indicators -->
                       <ol class="carousel-indicators">
                         <li data-target="#carousel3" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel3" data-slide-to="1"></li>
                         <li data-target="#carousel3" data-slide-to="2"></li>
-                        <li data-target="#carousel3" data-slide-to="3"></li>
                       </ol>
 
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
-                        <div class="item active">
-                          <img src="images/blank.png" data-src="images/ecuador.jpg" alt="...">
+                        <div class="item active">  
+                          <img src="images/active/china-pg-3.jpg" alt="...">
                           <div class="carousel-caption">
+                            <p>We kept Marc busy for 15 action-packed days in China, and we could’ve kept him occupied for several weeks more. Take a look at some of the highlights of his adventure here. Don’t be surprised if you work up a sweat just looking at them.</p>
                           </div>
-                          <!-- Flyout button -->
-                          <a class="btn-flyout call-flyout"></a>
-                          <!-- Flyout overlay -->
-                          <div class="flyout-overlay">
-                              <h3>This is some text for the overlay</h3>
-                              <p>This is some text for the overlay</p>
+                          <div class="infographic browntwo minh">
+                            <div class="share">
+                              <div class="pad">People share their photos with us all the time</div>
+                              <a href="#carousel3" data-slide-to="1">See the best of them now.</a>
+                            </div>
+                           
                           </div>
                         </div>
-
+                        <div class="item ">
+                          <img src="images/active/china-pg-2.jpg" alt="...">
+                        </div>
                         <div class="item">
-                          <img src="images/blank.png" data-src="images/china.jpg" alt="...">
-                          <div class="carousel-caption">
-                          </div>
+                          <img src="images/active/china-pg-1.jpg" alt="...">
                         </div>
-
-                        <div class="item">
-                          <img src="images/blank.png" data-src="images/turkey.jpg" alt="...">
-                          <div class="carousel-caption">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <img src="images/blank.png" data-src="images/turkey.jpg" alt="...">
-                          <div class="carousel-caption">
-                          </div>
-                        </div>
-
                       </div>
 
                       <!-- Controls -->
                       <a class="left carousel-control" href="#carousel3" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                         <span >&ndash;</span>
                       </a>
                       <a class="right carousel-control" href="#carousel3" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span>+</span>
                       </a>
+
                     </div>
                 </div>
 
-                <div class="scene">
-                    <div id="carousel4" class="carousel slide" data-ride="carousel" data-interval="false">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel4" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel4" data-slide-to="1"></li>
-                        <li data-target="#carousel4" data-slide-to="2"></li>
-                      </ol>
-
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <img src="images/blank.png" data-src="images/china.jpg" alt="...">
-                          <div class="carousel-caption">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <img src="images/blank.png" data-src="images/turkey.jpg" alt="...">
-                          <div class="carousel-caption">
-                          </div>
-                        </div>
+<!--
+              <div class="break-scene browntwo minh">
+                  <div class="share">
+                    <div class="pad">People share their photos with us all the time</div>
+                    <a href="">See the best of them now.</a>
+                  </div>
+                  <div class="plug">
+                    <span class="icons-camera icon"></span>
+                  <p class="head">Marc Travelled
+                     with us through Asia for two weeks<br /> and that made for countless photo ops.</p> 
+                   <p>Our travellers share photos from their adventures with us all the time. Check out a few of the lifelong memories we’ve helped make.</p>
+                  </div>
+                </div>
+-->
 
 
-                        <div class="item ">
-                          <img src="images/blank.png" data-src="images/ecuador.jpg" alt="...">
-                          <div class="carousel-caption">
-                          </div>
-                        </div>
 
-                        
-
-                        
-                      </div>
-
-                      <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel4" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel4" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
+                 <div class="break-scene whatis brown">
+                  <div class="container">
+                    <p class="title">Are you ready?</p>
+                    <div class="block">
+                        <span class="icons-hike icon"></span>
+                        <p>Active hikes and treks run the gamut from pleasant mountain strolls to mettle-testing challenges like Kilimanjaro and the Himalayas. </p>
+                        <a href="#" class="btn ">View all Hiking Tours</a>
                     </div>
+                    <div class="block">
+                        <span class="icons-bike icon"></span>
+                        <p>A bicycle connects you closer to a place and the people who live there than just about any other style of transport.</p>
+                        <a href="#" class="btn ">View all Cycling Tours</a>
+                    </div>
+                    <div class="block no-rm">
+                        <span class="icons-multi icon"></span>
+                        <p>Designed to utilize the characteristics of a destination, rafting, caving and other stuff you can’t do everywhere.</p>
+                        <a href="#" class="btn ">View all Multi Sport Tours</a>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="break-scene lightbrown mailer">
+                  <div class="contain">
+                    <div class="col2 mailer">
+                      <p class="title">Subscribe to our <br />Active Tours Mailer</p>
+                      <input type="text" class="footer-input" placeholder="Email" />
+                      <a class="btn">submit</a>
+                    </div>
+                    <div class="col2 brochure">
+                      <!-- <img src="images/brochure-thumb-1.jpg" /> -->
+                      <p class="title">Order our <br />Active Tour Brochure</p>
+                      <a class="btn">Request a brochure</a>
+                      <p></p>
+                    </div>
+                  </div>
                 </div>
 
 
-
-
+                <img src="images/fat.png" class="fat"/>
             </div>
-
-
         </div>
 
         <!-- build:js scripts/vendor.js -->
@@ -275,10 +407,8 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <script src="scripts/lazy.js"></script>
-        <script src="scripts/canvas2image.js"></script>
-        <script src="scripts/base64.js"></script>
+        <script src="scripts/froogaloop.min.js"></script>
+        <script src="scripts/story.js"></script>
         <!-- endbuild -->
 </body>
 </html>
